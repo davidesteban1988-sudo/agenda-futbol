@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#12392d">
+<title>Agenda de fútbol | Empresa</title>
+<style>
+:root{--green:#12392d;--green2:#205943;--lime:#d9f1a5;--bg:#f4f7f5;--line:#dce5df;--text:#182720;--muted:#68776e;--white:#fff;--amber:#d89b20;--blue:#4e7fc0;--red:#b85b5b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.wrap{max-width:1440px;margin:auto;padding:24px}.hero{background:linear-gradient(120deg,#102f25,#205943);color:#fff;border-radius:22px;padding:26px;display:flex;justify-content:space-between;gap:20px;align-items:center;box-shadow:0 10px 30px #12392d18}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.13em;color:#c5dccf;font-weight:800}.hero h1{font-size:clamp(25px,3vw,38px);margin:6px 0}.hero p{margin:0;color:#d8e6de}.hero-mark{font-size:48px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0}.stat,.panel{background:#fff;border:1px solid var(--line);border-radius:16px}.stat{padding:18px}.stat .label{color:var(--muted);font-size:13px}.stat strong{display:block;font-size:30px;margin-top:5px;letter-spacing:-.04em}.layout{display:grid;grid-template-columns:minmax(320px,.82fr) minmax(0,1.6fr);gap:18px;align-items:start}.panel{padding:20px;min-width:0}.panel h2{font-size:19px;margin:0 0 5px}.sub{font-size:13px;color:var(--muted);margin:0 0 18px}.field{display:grid;gap:6px;margin-bottom:13px}.field label{font-size:13px;font-weight:700}.field input,.field select,.toolbar input,.toolbar select{width:100%;border:1px solid #cbd7cf;background:#fff;border-radius:9px;padding:10px 11px;color:var(--text);min-width:0}.radio-row{display:flex;gap:8px;flex-wrap:wrap}.radio-row label{display:flex;gap:7px;align-items:center;border:1px solid var(--line);padding:9px 12px;border-radius:9px;font-weight:500;cursor:pointer}.radio-row input{accent-color:var(--green)}.btn{border:0;border-radius:9px;padding:10px 14px;font-weight:750;background:var(--green);color:#fff}.btn:hover{background:var(--green2)}.btn.secondary{background:#eef3ef;color:var(--green);border:1px solid var(--line)}.btn.danger{background:#fff1f1;color:#a33434;border:1px solid #f0d0d0}.btn.full{width:100%}.form-actions{display:flex;gap:8px}.form-actions .btn{flex:1}.msg{font-size:13px;margin:8px 0;color:#a33434}.monthbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}.monthbar h2{margin:0;text-transform:capitalize}.monthnav{display:flex;gap:7px}.monthnav button{width:36px;height:36px;border-radius:9px;border:1px solid var(--line);background:#fff;color:var(--green);font-size:20px}.toolbar{display:flex;gap:9px;margin-bottom:14px}.toolbar>*{flex:1;min-width:0}.legend{display:flex;gap:12px;flex-wrap:wrap;margin:0 0 13px}.legend span{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:12px}.dot{height:8px;width:8px;border-radius:50%;display:inline-block}.calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}.weekday{text-align:center;color:var(--muted);font-size:12px;font-weight:800;padding:7px 0}.day{border:1px solid var(--line);background:#fff;border-radius:10px;min-height:94px;padding:6px;min-width:0;text-align:left;display:flex;flex-direction:column;gap:5px;color:var(--text)}.day:hover{border-color:#7da18c}.day.selected{outline:2px solid var(--green);background:#f0f8f2}.day.empty{background:transparent;border-color:transparent;pointer-events:none}.daynum{font-weight:750;font-size:13px;display:flex;justify-content:space-between;align-items:center}.slot{border-radius:5px;color:#fff;padding:3px 4px;font-size:10px;line-height:1.25;overflow-wrap:anywhere}.confirmed{background:#237a53}.pending{background:var(--amber)}.played{background:var(--blue)}.cancelled{background:var(--red)}.more{font-size:10px;color:var(--muted)}.day-detail{margin-top:16px;border-top:1px solid var(--line);padding-top:16px}.day-detail h3{font-size:15px;margin:0 0 10px}.detail-item{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid #edf1ee}.detail-item:last-child{border-bottom:0}.detail-item strong{display:block}.detail-meta{color:var(--muted);font-size:12px;margin-top:3px}.pill{display:inline-block;font-size:11px;font-weight:750;padding:4px 8px;border-radius:99px;white-space:nowrap}.pill.confirmed{background:#e0f3e7;color:#1c6843}.pill.pending{background:#fff1cc;color:#865c00}.pill.played{background:#e3edfb;color:#28568f}.pill.cancelled{background:#fae5e5;color:#983e3e}.table-panel{margin-top:18px}.table-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:13px}.table-head h2{margin:0}.table-scroll{overflow:auto;border:1px solid var(--line);border-radius:12px}table{border-collapse:collapse;width:100%;min-width:850px;background:#fff}th,td{text-align:left;padding:12px 13px;border-bottom:1px solid #eaf0ec;font-size:13px;vertical-align:middle}th{background:#f5f8f6;color:#52635a;font-size:11px;text-transform:uppercase;letter-spacing:.04em}tbody tr:last-child td{border-bottom:0}td .secondary-text{display:block;color:var(--muted);font-size:12px;margin-top:2px}.actions{display:flex;gap:6px}.actions button{padding:6px 8px;font-size:12px}.empty-state{text-align:center;color:var(--muted);padding:28px 14px}.empty-state b{display:block;color:var(--text);margin-bottom:5px}.foot{color:var(--muted);font-size:12px;margin:14px 2px 0}.mobile-only{display:none}@media(max-width:900px){.layout{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.day{min-height:76px}.wrap{padding:14px}.panel{padding:15px}}@media(max-width:520px){.hero{padding:20px}.hero-mark{font-size:34px}.stats{gap:8px}.stat{padding:13px}.stat strong{font-size:25px}.toolbar{flex-direction:column}.day{min-height:61px;padding:4px;border-radius:7px}.calendar{gap:3px}.slot{font-size:9px;padding:2px}.daynum{font-size:12px}.panel{padding:12px}.wrap{padding:9px}.weekday{font-size:11px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero"><div><div class="eyebrow">Gestión deportiva · Empresa</div><h1>Agenda de fútbol</h1><p>Un solo registro para controlar compromisos, disponibilidad e historial.</p></div><div class="hero-mark" aria-hidden="true">⚽</div></header>
+<section class="stats">
+<div class="stat"><div class="label">Partidos confirmados</div><strong id="count-confirmed">0</strong></div>
+<div class="stat"><div class="label">Pendientes</div><strong id="count-pending">0</strong></div>
+<div class="stat"><div class="label">Jugados</div><strong id="count-played">0</strong></div>
+<div class="stat"><div class="label">Compromisos activos</div><strong id="count-active">0</strong></div>
+</section>
+<div class="layout">
+<section class="panel" id="form-panel">
+<h2 id="form-title">Registrar partido</h2><p class="sub">Completa los datos. Se reflejarán en la tabla y en el calendario.</p>
+<form id="match-form">
+<div class="field"><label for="date">Fecha *</label><input id="date" type="date" required></div>
+<div class="field"><label for="rival">Equipo rival *</label><input id="rival" maxlength="100" placeholder="Nombre del equipo" required></div>
+<div class="field"><label>Modalidad *</label><div class="radio-row"><label><input type="radio" name="modality" value="Fútbol 7" checked> Fútbol 7</label><label><input type="radio" name="modality" value="Fútbol 11"> Fútbol 11</label></div></div>
+<div class="field"><label for="status">Estado</label><select id="status"><option>Confirmado</option><option>Pendiente</option><option>Jugado</option><option>Cancelado</option></select></div>
+<div class="field"><label for="contact">Contacto</label><input id="contact" maxlength="120" placeholder="Nombre o teléfono"></div>
+<div class="field"><label for="pitch">Cancha / sede</label><input id="pitch" maxlength="120" placeholder="Lugar del encuentro"></div>
+<div class="field"><label for="result">Resultado</label><input id="result" maxlength="80" placeholder="Ej. Equipo empresa 3 - 2 Rival"></div>
+<div id="form-message" class="msg" role="alert" hidden></div>
+<div class="form-actions"><button class="btn" type="submit" id="save-btn">Registrar partido</button><button class="btn secondary" type="button" id="cancel-edit" hidden>Cancelar</button></div>
+</form>
+<p class="foot">Se programan partidos los miércoles y viernes. El sistema advierte si la fecha elegida no corresponde a esos días, pero permite guardar excepciones.</p>
+</section>
+<section class="panel">
+<div class="monthbar"><button class="btn secondary" id="prev-month" aria-label="Mes anterior">‹</button><h2 id="month-title">Mes</h2><button class="btn secondary" id="next-month" aria-label="Mes siguiente">›</button></div>
+<div class="toolbar"><select id="filter-modality" aria-label="Filtrar modalidad"><option value="Todas">Todas las modalidades</option><option>Fútbol 7</option><option>Fútbol 11</option></select><select id="filter-status" aria-label="Filtrar estado"><option value="Todos">Todos los estados</option><option>Confirmado</option><option>Pendiente</option><option>Jugado</option><option>Cancelado</option></select></div>
+<div class="legend"><span><i class="dot" style="background:#237a53"></i>Confirmado</span><span><i class="dot" style="background:#d89b20"></i>Pendiente</span><span><i class="dot" style="background:#4e7fc0"></i>Jugado</span><span><i class="dot" style="background:#b85b5b"></i>Cancelado</span></div>
+<div class="calendar" id="calendar"></div>
+<div class="day-detail"><h3 id="selected-title">Selecciona un día</h3><div id="selected-events" class="empty-state">Los partidos de la fecha seleccionada aparecerán aquí.</div></div>
+</section>
+</div>
+<section class="panel table-panel">
+<div class="table-head"><div><h2>Tabla maestra de partidos</h2><p class="sub" style="margin:4px 0 0">Esta es la fuente única de información del calendario.</p></div><input id="search" placeholder="Buscar rival, contacto o cancha" style="max-width:290px;border:1px solid #cbd7cf;border-radius:9px;padding:10px"></div>
+<div class="table-scroll"><table><thead><tr><th>Fecha</th><th>Rival</th><th>Modalidad</th><th>Estado</th><th>Contacto</th><th>Cancha</th><th>Resultado</th><th>Acciones</th></tr></thead><tbody id="table-body"></tbody></table></div>
+<div id="table-empty" class="empty-state" hidden><b>No hay partidos registrados</b>Usa el formulario para agregar los compromisos confirmados y pendientes.</div>
+<p class="foot">La disponibilidad mostrada significa que no hay un partido activo registrado en esta agenda para esa fecha/modalidad; no verifica la reserva de la cancha.</p>
+</section>
+<p class="foot">Versión inicial · Los datos se guardan en este navegador. Para compartir los mismos partidos con otros usuarios, será necesario conectar una base de datos compartida.</p>
+</div>
+<script>
+(function(){
+'use strict';
+var STORAGE_KEY='agenda-futbol-v1';
+var matches=[];
+var editingId=null;
+var selectedDate='';
+var viewDate=new Date();
+viewDate.setDate(1);
+var $=function(id){return document.getElementById(id);};
+var safeLoad=function(){try{var data=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');return Array.isArray(data)?data:[];}catch(e){return[];}};
+matches=safeLoad();
+var save=function(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(matches));}catch(e){alert('No fue posible guardar en este navegador.');}};
+var pad=function(n){return String(n).padStart(2,'0');};
+var keyDate=function(y,m,d){return y+'-'+pad(m+1)+'-'+pad(d);};
+var statusClass=function(s){return s==='Confirmado'?'confirmed':s==='Pendiente'?'pending':s==='Jugado'?'played':'cancelled';};
+var filtered=function(){var mod=$('filter-modality').value,st=$('filter-status').value,q=$('search').value.trim().toLowerCase();return matches.filter(function(p){return(mod==='Todas'||p.modality===mod)&&(st==='Todos'||p.status===st)&&[p.rival,p.contact,p.pitch].join(' ').toLowerCase().includes(q);});};
+var visibleDay=function(date){return filtered().filter(function(p){return p.date===date;});};
+var renderStats=function(){$('count-confirmed').textContent=matches.filter(function(p){return p.status==='Confirmado';}).length;$('count-pending').textContent=matches.filter(function(p){return p.status==='Pendiente';}).length;$('count-played').textContent=matches.filter(function(p){return p.status==='Jugado';}).length;$('count-active').textContent=matches.filter(function(p){return p.status==='Confirmado'||p.status==='Pendiente';}).length;};
+var renderCalendar=function(){
+var y=viewDate.getFullYear(),m=viewDate.getMonth(),first=new Date(y,m,1),days=new Date(y,m+1,0).getDate(),offset=(first.getDay()+6)%7;
+$('month-title').textContent=new Intl.DateTimeFormat('es-PE',{month:'long',year:'numeric'}).format(first);
+var html='';['L','M','X','J','V','S','D'].forEach(function(d){html+='<div class="weekday">'+d+'</div>';});
+for(var i=0;i<offset;i++)html+='<button class="day empty" tabindex="-1" aria-hidden="true"></button>';
+for(var day=1;day<=days;day++){
+var date=keyDate(y,m,day),list=visibleDay(date),weekday=new Date(y,m,day).getDay(),className='day'+(selectedDate===date?' selected':'');
+html+='<button type="button" class="'+className+'" data-date="'+date+'" aria-label="'+date+(list.length?', '+list.length+' partidos':'')+'"><span class="daynum"><span>'+day+'</span>'+(weekday===3||weekday===5?'<span style="color:#237a53;font-size:9px">●</span>':'')+'</span>';
+list.slice(0,2).forEach(function(p){html+='<span class="slot '+statusClass(p.status)+'">'+(p.modality==='Fútbol 7'?'F7':'F11')+' · '+escapeHtml(p.rival)+'</span>';});
+if(list.length>2)html+='<span class="more">+'+(list.length-2)+' más</span>';
+html+='</button>';
+}
+$('calendar').innerHTML=html;
+Array.prototype.forEach.call($('calendar').querySelectorAll('[data-date]'),function(btn){btn.addEventListener('click',function(){selectedDate=btn.getAttribute('data-date');$('date').value=selectedDate;renderCalendar();renderSelected();});});
+};
+function escapeHtml(v){return String(v||'').replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+var renderSelected=function(){
+if(!selectedDate){$('selected-title').textContent='Selecciona un día';$('selected-events').className='empty-state';$('selected-events').textContent='Los partidos de la fecha seleccionada aparecerán aquí.';return;}
+var d=new Date(selectedDate+'T12:00:00');$('selected-title').textContent=new Intl.DateTimeFormat('es-PE',{weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(d);
+var list=visibleDay(selectedDate);
+if(!list.length){$('selected-events').className='empty-state';$('selected-events').innerHTML='<b>Sin compromisos visibles</b>No hay partidos que coincidan con los filtros. La fecha parece libre en esta agenda.';return;}
+$('selected-events').className='';
+$('selected-events').innerHTML=list.map(function(p){return '<div class="detail-item"><div><strong>'+escapeHtml(p.rival)+' · '+escapeHtml(p.modality)+'</strong><div class="detail-meta">'+escapeHtml(p.contact||'Contacto sin registrar')+' · '+escapeHtml(p.pitch||'Cancha por definir')+(p.result?' · '+escapeHtml(p.result):'')+'</div></div><span class="pill '+statusClass(p.status)+'">'+escapeHtml(p.status)+'</span></div>';}).join('');
+};
+var renderTable=function(){
+var list=filtered().slice().sort(function(a,b){return a.date.localeCompare(b.date);});
+$('table-body').innerHTML=list.map(function(p){return '<tr><td>'+escapeHtml(p.date)+'</td><td><strong>'+escapeHtml(p.rival)+'</strong></td><td>'+escapeHtml(p.modality)+'</td><td><span class="pill '+statusClass(p.status)+'">'+escapeHtml(p.status)+'</span></td><td>'+escapeHtml(p.contact||'—')+'</td><td>'+escapeHtml(p.pitch||'—')+'</td><td>'+escapeHtml(p.result||'—')+'</td><td><div class="actions"><button class="btn secondary" data-edit="'+p.id+'">Editar</button><button class="btn danger" data-delete="'+p.id+'">Eliminar</button></div></td></tr>';}).join('');
+$('table-empty').hidden=list.length>0;
+Array.prototype.forEach.call($('table-body').querySelectorAll('[data-edit]'),function(btn){btn.addEventListener('click',function(){editMatch(Number(btn.getAttribute('data-edit')));});});
+Array.prototype.forEach.call($('table-body').querySelectorAll('[data-delete]'),function(btn){btn.addEventListener('click',function(){var id=Number(btn.getAttribute('data-delete'));var p=matches.find(function(x){return x.id===id;});if(p&&confirm('¿Eliminar el partido contra '+p.rival+'?')){matches=matches.filter(function(x){return x.id!==id;});save();renderAll();}});});
+};
+var renderAll=function(){renderStats();renderCalendar();renderSelected();renderTable();};
+var resetForm=function(){editingId=null;$('match-form').reset();$('status').value='Confirmado';document.querySelector('input[name="modality"][value="Fútbol 7"]').checked=true;$('form-title').textContent='Registrar partido';$('save-btn').textContent='Registrar partido';$('cancel-edit').hidden=true;$('form-message').hidden=true;};
+function editMatch(id){var p=matches.find(function(x){return x.id===id;});if(!p)return;editingId=id;$('date').value=p.date;$('rival').value=p.rival;$('contact').value=p.contact||'';$('pitch').value=p.pitch||'';$('result').value=p.result||'';$('status').value=p.status;document.querySelector('input[name="modality"][value="'+p.modality+'"]').checked=true;$('form-title').textContent='Editar partido';$('save-btn').textContent='Guardar cambios';$('cancel-edit').hidden=false;$('form-message').hidden=true;$('form-panel').scrollIntoView({behavior:'smooth',block:'start'});}
+$('match-form').addEventListener('submit',function(e){
+e.preventDefault();
+var date=$('date').value,rival=$('rival').value.trim(),modality=document.querySelector('input[name="modality"]:checked').value,status=$('status').value;
+var msg=$('form-message');msg.hidden=true;
+if(!date||!rival){msg.textContent='La fecha y el equipo rival son obligatorios.';msg.hidden=false;return;}
+var d=new Date(date+'T12:00:00');
+if(d.getDay()!==3&&d.getDay()!==5&&!confirm('La fecha seleccionada no es miércoles ni viernes. ¿Deseas guardar el compromiso de todas formas?'))return;
+var conflict=matches.some(function(p){return p.id!==editingId&&p.date===date&&p.modality===modality&&p.status!=='Cancelado'&&status!=='Cancelado';});
+if(conflict&&!confirm('Ya hay un compromiso activo para esta fecha y modalidad. ¿Deseas registrar otro de todas formas?'))return;
+var p={id:editingId===null?Date.now():editingId,date:date,rival:rival,modality:modality,status:status,contact:$('contact').value.trim(),pitch:$('pitch').value.trim(),result:$('result').value.trim()};
+if(editingId===null)matches.push(p);else matches=matches.map(function(x){return x.id===editingId?p:x;});
+selectedDate=date;viewDate=new Date(date+'T12:00:00');viewDate.setDate(1);save();resetForm();renderAll();
+});
+$('cancel-edit').addEventListener('click',resetForm);
+$('prev-month').addEventListener('click',function(){viewDate.setMonth(viewDate.getMonth()-1);renderCalendar();});
+$('next-month').addEventListener('click',function(){viewDate.setMonth(viewDate.getMonth()+1);renderCalendar();});
+['filter-modality','filter-status','search'].forEach(function(id){$(id).addEventListener(id==='search'?'input':'change',function(){renderCalendar();renderSelected();renderTable();});});
+renderAll();
+})();
+</script>
+</body>
+</html>
